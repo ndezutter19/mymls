@@ -1,11 +1,11 @@
 Features
 
-    Fetches active and closed real estate listings from a specified API.
-    Filters active listings to include only those priced under $500k.
-    Calculates the price per square foot for both active and closed listings.
-    Compares active listings' price per square foot to the average closed listings' price per square foot in the same postal code.
-    Identifies potential buys where the active listing price per square foot is below the average closed listing price per square foot.
-    Provides detailed explanations and clickable links to the listings.
+* Fetches active and closed real estate listings from a specified API (gotten from the website).
+* Filters active listings to include only those priced under $500k.
+* Calculates the price per square foot for both active and closed listings.
+* Compares active listings' price per square foot to the average closed listings' price per square foot in the same postal code.
+* Identifies potential buys where the active listing price per square foot is below the average closed listing price per square foot.
+* Provides detailed explanations and clickable links to the listings.
 
 Prerequisites
 
@@ -15,22 +15,18 @@ Prerequisites
 
 You can install the required Python libraries using pip:
 
-pip install requests pandas
+    pip install requests pandas
 
-Usage
+Clone the repository:
 
-    Clone the Repository:
-
-git clone https://github.com/yourusername/real-estate-listings-analysis.git
-cd real-estate-listings-analysis
+    git clone https://github.com/yourusername/real-estate-listings-analysis.git
+    cd real-estate-listings-analysis
 
 Run the Script:
 
     python mlsscraper.py
 
-    Script Output:
-
-    The script prints the potential buys directly to the console in a readable format, including the explanation with the numbers and a clickable link.
+The script prints the potential buys directly to the console in a readable format, including the explanation with the numbers and a clickable link.
 
 Script Explanation
 Fetch Data
