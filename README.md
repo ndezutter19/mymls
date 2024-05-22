@@ -1,4 +1,8 @@
-Features
+Features:
+
+data scraped from 
+    
+    https://listings.takemylowrate.com/
 
 * Fetches active and closed real estate listings from a specified API (gotten from the website).
 * Filters active listings to include only those priced under $500k.
