@@ -46,7 +46,7 @@ potential_buys = merged_df[merged_df['delta'] < 0].copy()
 # Construct the link and explanation for each property
 base_url = "https://listings.takemylowrate.com/listing"
 potential_buys.loc[:, 'link'] = potential_buys.apply(
-    lambda row: f"{base_url}/{row['Property.streetNumber']}_{row['Property.route']}_{row['Property.city']}_{row['Property.state']}/{row['id']}", axis=1
+    lambda row: f"{base_url}/{row['Property.streetNumber']}_{row['Property.route'].replace(' ', '')}_{row['Property.city'].replace(' ', '')}_{row['Property.state']}/{row['id']}", axis=1
 )
 potential_buys.loc[:, 'explanation'] = potential_buys.apply(
     lambda row: f"The asking price per square foot is ${row['price_per_sqft']:.2f}, which is ${-row['delta']:.2f} lower than the average sold price per square foot in this area (${row['avg_price_per_sqft_closed']:.2f}). This makes it a potentially good buy.", axis=1
